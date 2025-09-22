@@ -1,0 +1,59 @@
+.page_top {
+    position: absolute;
+    bottom: 2vh;
+    left: 2vw;
+    box-sizing: border-box;
+    width: 80vw;
+    min-width: 260px;
+    max-width: 400px;
+    border-radius: 50%;
+    background: #fcfbbd;
+    animation: page_top 3s linear 0s 1 both;
+  
+    .top_inner {
+      padding: 50%;
+      position: relative;
+  
+      .site_ttl {
+        margin: 0 auto;
+        position: absolute;
+        top: 25%;
+        left: 20%;
+        font-size: 40px;
+        font-weight: 100;
+  
+        span:first-child,
+        span:nth-child(15),
+        span:last-child {
+          color: #fa7878;
+        }
+      }
+  
+      .page_content {
+        position: absolute;
+        bottom: 35%;
+        left: 50%;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        animation: page_content 3s linear 3s 1 both;
+  
+        .fn_s {
+          display: block;
+          font-size: 0.7em;
+        }
+  
+        .btn_enter {
+          display: block;
+          margin: 5% auto;
+          font-size: 24px;
+  
+          a:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  
