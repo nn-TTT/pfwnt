@@ -1,23 +1,37 @@
 type TextSpanProps = {
   text: string;
-  className?: string;
+  as?: keyof JSX.IntrinsicElements;
+  wrapClassName?: string;
 };
 
-export default function TextSpan({ text, className }: TextSpanProps) {
-  // クラス名に txt_clr が含まれるかチェック
-  const shouldSplit = className?.includes("txt_clr");
+export default function TextSpan(props: TextSpanProps) {
+  // デバッグ用ログ
+  console.log("TextSpan props:", props);
+
+  const {
+    text,
+    as: Tag = "span",
+    wrapClassName = "txt_accent",
+  } = props;
+
+  if (!text) return null;
+
+  const chars = Array.from(text);
+  // if (chars.length === 1) {
+  //   return (
+  //     <Tag className={wrapClassName}>{chars[0]}</Tag>
+  //   );
+  // }
+
+  const first = chars[0];
+  const last = chars[chars.length - 1];
+  const middle = chars.slice(1, -1).join("");
 
   return (
-    <h1 className={className}>
-      {shouldSplit
-        ? text.split("").map((char, i) =>
-            char.trim() === "" ? " " : (
-              <span key={i} className="site_txt">
-                {char}
-              </span>
-            )
-          )
-        : text}
-    </h1>
+    <>
+      <Tag className={wrapClassName}>{first}</Tag>
+      {middle}
+      <Tag className={wrapClassName}>{last}</Tag>
+    </>
   );
 }

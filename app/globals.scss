@@ -40,6 +40,12 @@ img, picture {
 input, button, textarea, select {
   font: inherit;
 }
+
+body {
+  background-color: var(--bg);
+  font-family: 'Nico Moji', 'M PLUS Rounded 1c', 'Noto Sans JP', sans-serif;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
@@ -53,7 +59,3 @@ input, button, textarea, select {
 }
 
 
-body {
-  background-color: var(--bg);
-  font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', 'nicomoji', sans-serif;
-}

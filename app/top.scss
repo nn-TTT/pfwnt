@@ -22,9 +22,9 @@
         font-size: 40px;
         font-weight: 100;
   
-        span:first-child,
-        span:nth-child(15),
-        span:last-child {
+        .txt_accent:first-child,
+        .txt_accent:nth-child(15),
+        .txt_accent:last-child {
           color: #fa7878;
         }
       }
@@ -55,5 +55,18 @@
         }
       }
     }
+
+    @keyframes page_top { 
+      0%		{ transform: translate(100%, 0%) rotate(360deg); } 
+      50%		{ transform: translate(60%, 0%) rotate(180deg); }
+      100%	{ transform: translate(0%, 0%) rotate(0deg); }
+    }
+    @keyframes page_content { 
+      0%		{ opacity: 0;	transform: translate(0, -500%); } 
+      50%		{ transform: translate(0%, 50%); }
+      100%	{ opacity: 1;	transform: translate(0%, 100%); }
+    }
+
+
   }
   

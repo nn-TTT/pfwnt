@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
+  title: "Portfolio Page",
   description: "Next.js Portfolio Site",
 };
 
